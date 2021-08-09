@@ -43,7 +43,7 @@ public class EmployeeWageBuilder {
 	 * @param args
 	 * Creating objects of a class
 	 * Calling different methods with objects if not static
-	 * Passing values while calling method
+	 * Passing values while calling method.
 	 */
 	public static void main(String args[]) {
 
