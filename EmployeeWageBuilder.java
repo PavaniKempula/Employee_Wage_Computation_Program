@@ -6,8 +6,11 @@ public class EmployeeWageBuilder {
 
 	private static final int IS_PART_TIME = 1;
     private static final int IS_FULL_TIME = 2;
+    private static int totalEmpWage;
+    // private static int totalEmpWage;
+    //  private int totalEmpWage;
     
-    public static void computEmpWage( ){
+    public static int computEmpWage( ){
 
         int empHrs = 0;
         int empWage = 0;
@@ -36,18 +39,21 @@ public class EmployeeWageBuilder {
         }
 
         totalEmpWage =totalEmpHrs *Company.wagePerHrs;
-        System.out.println("Total Emp Hrs is:"+totalEmpHrs);
-        System.out.println("Company is: "+Company.company +", Total Emp Wage is :"+totalEmpWage);
-   // return totalEmpWage;
-}
+       //  System.out.println("Total Emp Hrs is:"+totalEmpHrs);
+       // System.out.println("Company is: "+Company.company +", Total Emp Wage is :"+totalEmpWage);
+        return totalEmpWage;
+    }
 
     public static void main(String[] args){
     	EmployeeWageBuilder c = new EmployeeWageBuilder();
         Company cap = new Company("Capgemini",20,2,10);
-        c.computEmpWage();
+        // c.computEmpWage();
+        System.out.println(cap);
         System.out.println("__________________________________________");
         Company dmart = new Company("Dmart",20,3,100);
-        c.computEmpWage();
+        // c.computEmpWage();
+        System.out.println(dmart);
+        
 
     }
 
