@@ -3,21 +3,24 @@ package com.bridgelabz;
 /*
  * @author Pavani
  * 
- * With respect to employees attendance,
- * Calculating employee daily and monthly,
- * wage as per their Company's parameters
  */
 public class EmployeeWageBuilder {
+	/*
+	 * @param args
+	 * 
+	 * Creating objects of a class. 
+	 * Calling different methods with objects if not
+	 * static. Passing values while calling method.
+	 */
 	public static void main(String[] args) {
 
 		// Displaying Welcome Message
 		System.out.println("------------------Welcome To Employee Wage Computation------------------");
 
 		EmpWageComputationImpl empWageComputation = new EmpWageComputationImpl();
-		empWageComputation.addCompany("Capgemini", 20, 2, 50);
-		System.out.println("--------------------------------------------------------------------");
-		empWageComputation.addCompany("Barclays", 10, 4, 100);
-		empWageComputation.computEmpWage();
+		empWageComputation.addCompanyEmployee("Capgemini", 20, 2, 50);
+		empWageComputation.addCompanyEmployee("Barclays", 10, 4, 100);
+		empWageComputation.getCalculationDailyWage();
 	}
 
 }
