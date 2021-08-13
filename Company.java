@@ -1,28 +1,30 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+
 public class Company {
 
-	public static String company;
-	public static int wagePerHrs;
-	public static int numOfWorkinDays;
-	public static int maxHrsPerMonth;
-	public int totalEmpWage;
+	public final String company;
+	public final int empRatePerHour;
+	public final int workingDaysInMonth;
+	public final int maximunWorkHours;
+	int totalSalary;
 
-	public Company(String company, int wagePerHrs, int numOfWorkinDays, int maxHrsPerMonth) {
+	public ArrayList<Integer> dailyWage = new ArrayList<>();
+
+	public Company(String company, int empRatePerHour, int workingDaysInMonth, int maximunWorkHours) {
 		this.company = company;
-		this.wagePerHrs = wagePerHrs;
-		this.numOfWorkinDays = numOfWorkinDays;
-		this.maxHrsPerMonth = maxHrsPerMonth;
-
+		this.empRatePerHour = empRatePerHour;
+		this.workingDaysInMonth = workingDaysInMonth;
+		this.maximunWorkHours = maximunWorkHours;
 	}
 
-	public void setTotalEmpWage(int totalEmpWage) {
-		this.totalEmpWage = totalEmpWage;
+	public void getTotalWage(int totalSalary) {
+		this.totalSalary = totalSalary;
 	}
 
-	@Override
-	public String toString() {
-		return "company Name ='" + company + '\'' + ", \nTotal Emploee Wage =" + totalEmpWage + "\n---------------------------------------------------------------------";
+	public void storeDailyWage(ArrayList<Integer> dailyWage) {
+		this.dailyWage = dailyWage;
 	}
 
 }
