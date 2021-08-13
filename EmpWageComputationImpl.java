@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class EmpWageComputationImpl implements EmpWageInterface {
 	public int numOfCompany = 0;
+	// Instead of array used arraylist
 	private ArrayList<Company> companyAraay;
 
 	public EmpWageComputationImpl() {
@@ -16,10 +17,10 @@ public class EmpWageComputationImpl implements EmpWageInterface {
 	}
 
 	public void computEmpWage() {
-        for (int i = 0; i < numOfCompany; i++) {
-            companyAraay.get(i).setTotalEmpWage(this.computEmpWage(companyAraay.get(i)));
-            System.out.println(companyAraay.get(i));
-        }
+		for (int i = 0; i < numOfCompany; i++) {
+			companyAraay.get(i).setTotalEmpWage(this.computEmpWage(companyAraay.get(i)));
+			System.out.println(companyAraay.get(i));
+		}
 	}
 
 	public int computEmpWage(Company company) {
